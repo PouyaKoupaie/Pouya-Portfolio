@@ -1,0 +1,9 @@
+@import "tailwindcss";
+body {
+  margin: 0;
+  height: fit-content;
+}
+:root {
+  background-color: black;
+  height: fit-content;
+}
