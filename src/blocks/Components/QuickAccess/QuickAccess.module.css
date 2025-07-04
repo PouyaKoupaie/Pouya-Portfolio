@@ -76,9 +76,9 @@
   transform: translate(25px, -2px) skew(-5deg);
 }
 
-.iso-pro:hover .svg {
+/* .iso-pro:hover .svg {
   transform: translate(5px, -5px);
-}
+} */
 
 .iso-pro span {
   opacity: 0;

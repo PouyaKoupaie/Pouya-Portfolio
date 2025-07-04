@@ -1,0 +1,160 @@
+.whoami-code {
+  background: #121317;
+  color: #e6e6e6;
+  font-family: "Fira Mono", "Consolas", monospace;
+  font-size: 1.12em;
+  border-radius: 14px;
+  padding: 2.2em 0 2.2em 4.4em;
+  margin: 2.5em auto;
+  max-width: 800px;
+  overflow-x: auto;
+  box-shadow:
+    0 6px 28px rgba(0, 0, 0, 0.2),
+    0 1.5px 0 #191a1f inset;
+  border: 1.5px solid #181a20;
+  position: relative;
+  counter-reset: code-line;
+  line-height: 1.55;
+}
+
+.whoami-code span.code-line {
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  min-height: 1.45em;
+  white-space: pre;
+}
+
+.whoami-code span.code-line::before {
+  counter-increment: code-line;
+  content: counter(code-line);
+  position: absolute;
+  left: -3.2em;
+  width: 2.4em;
+  text-align: right;
+  color: #3a3d4a;
+  font-size: 0.99em;
+  font-family: inherit;
+  border-right: 1.5px solid #22232a;
+  padding-right: 0.6em;
+  user-select: none;
+  transition: color 0.17s;
+}
+
+.whoami-code span.code-line:hover::before {
+  color: #7dd3fc;
+}
+
+.function-name {
+  color: #6ddcff;
+}
+.var {
+  color: #e2777a;
+}
+.string {
+  color: #fcd66d;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.class {
+  color: #6ddcff;
+}
+.comment {
+  color: #697098;
+  font-style: italic;
+}
+.param {
+  color: #e1e1e6;
+}
+
+.icon {
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  margin-left: 0.3em;
+  margin-right: 0.2em;
+  filter: drop-shadow(0 1px 3px #1116);
+  color: #43fe97;
+  background: transparent;
+  border-radius: 4px;
+  transition:
+    opacity 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.18s ease;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%) scale(0.9);
+  z-index: 10;
+}
+
+.string:hover .icon,
+.string:focus .icon {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) scale(1.08);
+  color: #ffffff;
+}
+
+.string:hover,
+.string:focus {
+  color: #f9b572;
+  background: rgba(36, 40, 46, 0.28);
+  border-radius: 6px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+@media (max-width: 600px) {
+  .whoami-code {
+    padding: 1.1em 0 1.1em 2.4em;
+    font-size: 1em;
+    border-radius: 8px;
+    margin: 1em 0.1em;
+  }
+  .icon {
+    width: 18px;
+    height: 18px;
+    left: 104%;
+  }
+}
+.keyword {
+  color: rgb(254, 67, 95);
+  font-weight: bold;
+}
+.function-name {
+  color: #9a8fff;
+}
+.var {
+  color: rgba(255, 255, 255, 0.9);
+}
+.string {
+  color: #43fe97;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.class {
+  color: #5643fe;
+}
+.comment {
+  color: #697098;
+  font-style: italic;
+}
+.param {
+  color: #e1e1e6;
+}
+.operator {
+  color: #fefe43;
+}
+.punctuation {
+  color: #727272;
+}
+.console {
+  color: #fe9a43;
+}

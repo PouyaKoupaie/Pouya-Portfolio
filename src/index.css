@@ -1,9 +1,50 @@
 @import "tailwindcss";
+.triangle-bg,
+.wrap,
+html,
 body {
+  height: 100%;
   margin: 0;
-  height: fit-content;
+  padding: 0;
 }
-:root {
-  background-color: black;
-  height: fit-content;
+@theme {
+  --color-spaceGreen :#7cff67;
+  --color-spaceBlue :#78bbfa;
+  --color-spaceDarkPurple : #22074a
 }
+@layer components {
+  .card {
+    @apply p-6 rounded-3xl bg-spaceDarkPurple w-fit border-8 border-spaceGreen;
+    box-shadow: 0 0 30px 10px var(--color-spaceGreen);
+  }
+  .card h2 {
+    @apply text-2xl font-semibold text-emerald-300
+  }
+  .card p {
+    @apply text-white text-xl font-semibold
+  }
+}
+.triangle-bg {
+  background: black;
+  background-image: radial-gradient(circle at center, white 0%, #222 10%, black 60%);
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Behind everything */
+}
+
+.wrap {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+.tri {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 0;
+  width: 0;
+}
+

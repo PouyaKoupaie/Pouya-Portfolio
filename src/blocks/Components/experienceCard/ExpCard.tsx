@@ -1,9 +1,16 @@
-import styles from './ExpCard.module.css'
-
-export default function ExpCard() {
+export default function ExpCard({
+  title = " Uiverse",
+  paragraphs = ["paragraph"],
+}: {
+  title?: string;
+  paragraphs?: string[];
+}) {
   return (
-    <div className={styles.card}>
-      <div className={styles.title}>We're on Social Media</div>
+    <div className="card">
+      <h2>{title}</h2>
+      {paragraphs.map((paragraph) => (
+        <p>{paragraph}</p>
+      ))}
     </div>
   );
 }
