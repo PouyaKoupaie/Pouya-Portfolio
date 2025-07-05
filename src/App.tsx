@@ -18,7 +18,6 @@ import TerminalCard from "./blocks/Components/Terminal/TerminalCardNext";
 import profileImage from "../public/5992434445958897155-Photoroom.png";
 import TriangleBackground from "./blocks/Backgrounds/Aurora/triangle/TriangleBackground";
 import Summary from "./blocks/Components/Summary";
-// import Form from "./blocks/Components/Form/Form";
 import SpaceForm from "./blocks/Components/Form/Form";
 import RotatingText from "./blocks/TextAnimations/RotatingText/RotatingText";
 import ResumePdf from './assets/pdf/PouyaResume.pdf';

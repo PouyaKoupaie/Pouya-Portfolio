@@ -1,5 +1,6 @@
+import { memo } from "react";
 import styles from "./TerminalCardNext.module.css";
-export default function TerminalCard() {
+function TerminalCard() {
   return (
     <div className={`${styles.terminal} btn-85 relative inline-block rounded-xl`}>
       <hgroup className={styles.head}>
@@ -36,3 +37,4 @@ export default function TerminalCard() {
     </div>
   );
 }
+export default memo(TerminalCard)

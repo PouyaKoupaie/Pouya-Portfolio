@@ -1,6 +1,6 @@
 const SpaceForm = () => {
   return (
-    <div className="w-full max-w-md m-auto">
+    <div className="md:w-full max-w-md w-3/4 m-auto">
       <div className="text-center">
         <h2 className="text-3xl font-bold text-white glow">
           Contact the Galaxy
@@ -10,7 +10,7 @@ const SpaceForm = () => {
         </p>
       </div>
 
-      <form className="space-y-4 text-white flex flex-col items-center">
+      <form className="space-y-4 text-white flex flex-col items-center" action="pouya.koupaie2003@gmail.com" method="post" encType="text/plain">
         <div className='w-full'>
           <label htmlFor="name" className="block text-sm font-medium">
             Your Name
