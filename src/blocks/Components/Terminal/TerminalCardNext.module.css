@@ -1,13 +1,5 @@
 /* From Uiverse.io by drewsephski */ 
-.card {
-  padding: 0.5rem;
-  overflow: hidden;
-  border-radius: 20px;
-  background-color: #7cff67;
-  box-shadow: 0 0 30px 10px #7cff67;
-  min-width: 344px;
-  height: fit-content;
-}
+
 .terminal {
   display: flex;
   flex-direction: column;
