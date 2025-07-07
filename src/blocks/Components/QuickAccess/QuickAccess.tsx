@@ -33,7 +33,7 @@ export default function QuickAccess() {
             >
               <li className={styles["iso-pro"]}>
                 <a
-                  href="https://linkedin.com/in/pouya-koupaie"
+                  href="https://www.linkedin.com/in/pouya-koupaie/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
