@@ -15,7 +15,7 @@ import gitLogo from "./assets/images/Git--Streamline-Svg-Logos.svg";
 import githubLogo from "./assets/images/Github-Icon--Streamline-Svg-Logos.svg";
 import jiraLogo from "./assets/images/jira-svgrepo-com.svg";
 import TerminalCard from "./blocks/Components/Terminal/TerminalCardNext";
-import profileImage from "../public/5992434445958897155-Photoroom.png";
+// import profileImage from "../public/5992434445958897155-Photoroom.png";
 import TriangleBackground from "./blocks/Backgrounds/Aurora/triangle/TriangleBackground";
 import Summary from "./blocks/Components/Summary";
 import SpaceForm from "./blocks/Components/Form/Form";
@@ -51,7 +51,7 @@ function App() {
               handle="javicodes"
               status="Online"
               contactText="Contact Me"
-              avatarUrl={profileImage}
+              avatarUrl='/5992434445958897155-Photoroom.png'
               showUserInfo={true}
               enableTilt={true}
               onContactClick={() => console.log("Contact clicked")}
