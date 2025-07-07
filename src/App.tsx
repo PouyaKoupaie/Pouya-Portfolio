@@ -3,7 +3,7 @@ import ProfileCard from "./blocks/Components/ProfileCard/ProfileCard";
 import QuickAccess from "./blocks/Components/QuickAccess/QuickAccess";
 import ScrollVelocity from "./blocks/TextAnimations/ScrollVelocity/ScrollVelocity";
 import TerminalCard from "./blocks/Components/Terminal/TerminalCardNext";
-// import profileImage from "../public/5992434445958897155-Photoroom.png";
+import profileImage from "./assets/images/5992434445958897155-Photoroom.png";
 import TriangleBackground from "./blocks/Backgrounds/Aurora/triangle/TriangleBackground";
 import Summary from "./blocks/Components/Summary";
 import SpaceForm from "./blocks/Components/Form/Form";
@@ -45,7 +45,7 @@ function App() {
               handle="parallel-user"
               status=""
               contactText="Contact Me"
-              avatarUrl='/5992434445958897155-Photoroom.png'
+              avatarUrl={profileImage}
               showUserInfo={true}
               enableTilt={true}
               onContactClick={handleContactClick}
