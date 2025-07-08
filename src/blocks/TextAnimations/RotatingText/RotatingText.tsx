@@ -3,10 +3,8 @@
 */
 
 import React, {
-  forwardRef,
   useCallback,
   useEffect,
-  useImperativeHandle,
   useMemo,
   useState,
 } from "react";
@@ -54,7 +52,7 @@ export interface RotatingTextProps
   elementLevelClassName?: string;
 }
 
-const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
+const RotatingText = 
   (
     {
       texts,
@@ -75,8 +73,7 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
       splitLevelClassName,
       elementLevelClassName,
       ...rest
-    },
-    ref,
+    } : RotatingTextProps
   ) => {
     const [currentTextIndex, setCurrentTextIndex] = useState<number>(0);
 
@@ -158,45 +155,6 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
       }
     }, [currentTextIndex, texts.length, loop, handleIndexChange]);
 
-    const previous = useCallback(() => {
-      const prevIndex =
-        currentTextIndex === 0
-          ? loop
-            ? texts.length - 1
-            : currentTextIndex
-          : currentTextIndex - 1;
-      if (prevIndex !== currentTextIndex) {
-        handleIndexChange(prevIndex);
-      }
-    }, [currentTextIndex, texts.length, loop, handleIndexChange]);
-
-    const jumpTo = useCallback(
-      (index: number) => {
-        const validIndex = Math.max(0, Math.min(index, texts.length - 1));
-        if (validIndex !== currentTextIndex) {
-          handleIndexChange(validIndex);
-        }
-      },
-      [texts.length, currentTextIndex, handleIndexChange],
-    );
-
-    const reset = useCallback(() => {
-      if (currentTextIndex !== 0) {
-        handleIndexChange(0);
-      }
-    }, [currentTextIndex, handleIndexChange]);
-
-    useImperativeHandle(
-      ref,
-      () => ({
-        next,
-        previous,
-        jumpTo,
-        reset,
-      }),
-      [next, previous, jumpTo, reset],
-    );
-
     useEffect(() => {
       if (!auto) return;
       const intervalId = setInterval(next, rotationInterval);
@@ -268,8 +226,7 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
         </AnimatePresence>
       </motion.span>
     );
-  },
-);
+  }
 
-RotatingText.displayName = "RotatingText";
+// RotatingText.displayName = "RotatingText";
 export default RotatingText;

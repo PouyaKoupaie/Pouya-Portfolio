@@ -6,11 +6,12 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #180338;
 }
 @theme {
-  --color-spaceGreen :#7cff67;
-  --color-spaceBlue :#78bbfa;
-  --color-spaceDarkPurple : #22074a
+  --color-spaceGreen: #7cff67;
+  --color-spaceBlue: #78bbfa;
+  --color-spaceDarkPurple: #22074a;
 }
 @layer components {
   .card {
@@ -18,12 +19,12 @@ body {
     box-shadow: 0 0 30px 10px var(--color-spaceGreen);
   }
   .card h2 {
-    @apply text-2xl font-semibold text-emerald-300
+    @apply text-2xl font-semibold text-emerald-300;
   }
   .card p {
-    @apply text-white text-xl font-semibold
+    @apply text-white text-xl font-semibold;
   }
-   .btn-85 {
+  .btn-85 {
     @apply bg-[#111] border-none outline-none select-none cursor-pointer;
 
     /* For Safari */
@@ -70,29 +71,6 @@ body {
     background: #222;
   }
 }
-.triangle-bg {
-  background: black;
-  background-image: radial-gradient(circle at center, white 0%, #222 10%, black 60%);
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Behind everything */
-}
-
-.wrap {
-  position: relative;
-  transform-style: preserve-3d;
-  perspective: 800px;
-}
-
-.tri {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 0;
-  width: 0;
-}
 
 @keyframes glowing-85 {
   0% {
@@ -105,3 +83,22 @@ body {
     background-position: 0 0;
   }
 }
+@keyframes floating-points {
+  0% {
+    transform: translateY(0);
+  }
+  85% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(800px);
+    opacity: 0.2;
+  }
+}
+
+@layer utilities {
+  .animate-floating-points {
+    animation: floating-points infinite linear;
+  }
+}
+
