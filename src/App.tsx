@@ -6,7 +6,7 @@ import TerminalCard from "./blocks/Components/Terminal/TerminalCardNext";
 import profileImage from "./assets/images/5992434445958897155-Photoroom.png";
 import Summary from "./blocks/Components/Summary";
 import SpaceForm from "./blocks/Components/Form/Form";
-import ResumePdf from "./assets/pdf/PouyaResume.pdf";
+import ResumePdf from "./assets/pdf/PouyaKoupaieResume.pdf";
 import { useRef } from "react";
 import { scrollElements } from "./scrollElements";
 import AnimateText from "./AnimateText";

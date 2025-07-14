@@ -5,13 +5,10 @@ export default function Summary() {
     <>
       <h1 className="text-3xl font-bold mb-4">Overview</h1>
       <BlurText animateBy="words" className="text-xl/10" delay={120}>
-        Front-End Developer with{" "}
-        <strong className="text-spaceBlue">3 years</strong> of experience in
-        developing Single-Page Applications (SPAs) using{" "}
-        <strong className="text-spaceBlue">React and Next JS.</strong>{" "}
-        Demonstrated ability to collaborate effectively as a team member,
-        consistently delivering high-quality and innovative solutions. Leveraged
-        various libraries to enhance performance and development speed
+        <strong className="text-spaceBlue">Front-End Developer with 3 years</strong> of of hands-on experience crafting dynamic, responsive web applications using{" "}
+        <strong className="text-spaceBlue">React.JS and Next.JS.</strong>{" "}
+        Adept at creating pixel-perfect UIs. Strong collaborator with a user-first mindset and a proven track 
+        effective team collaboration and consistently delivering innovative, high-quality solutions.
       </BlurText>
     </>
   );
