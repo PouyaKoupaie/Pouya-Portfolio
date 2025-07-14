@@ -55,8 +55,8 @@ function App() {
         ))}
       </div>
       <div className="w-full m-auto relative">
-        <div className="flex flex-wrap md:justify-evenly gap-4">
-          <div className="lg:w-1/4 md:w-1/3 w-2/3 m-auto md:m-0 flex flex-col justify-between  order-2 md:order-none">
+        <div className="grid md:grid-cols-2 place-items-center md:justify-evenly gap-4">
+          <div className=" md:w-2/3 w-3/4 m-auto md:m-0 flex flex-col justify-between order-1 md:order-none">
             <div className="text-emerald-300">
               <Summary />
             </div>
@@ -71,7 +71,7 @@ function App() {
             </button>
             <TerminalCard />
           </div>
-          <div className="order-none m-auto md:m-0">
+          <div className=" md:m-0">
             <ProfileCard
               name="Pouya Koupaie"
               title="Frontend Developer"

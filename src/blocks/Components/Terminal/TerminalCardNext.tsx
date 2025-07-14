@@ -2,7 +2,7 @@ import { memo } from "react";
 import styles from "./TerminalCardNext.module.css";
 function TerminalCard() {
   return (
-    <div className={`${styles.terminal} btn-85 relative inline-block rounded-xl`}>
+    <div className={`${styles.terminal} btn-85 relative inline-block rounded-xl md:w-2/4 m-auto`}>
       <hgroup className={styles.head}>
         <p className={styles.title}>
           <svg
